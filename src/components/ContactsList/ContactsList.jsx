@@ -22,12 +22,14 @@ export const ContactListBox = () => {
   console.log('visibleContacts: ', visibleContacts);
 
   return (
-    <ul>
-      {visibleContacts.map(contact => (
-        <Item key={contact.id}>
-          <ContactItem contact={contact} />
-        </Item>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {visibleContacts.map(contact => (
+          <Item key={contact.id}>
+            <ContactItem contact={contact} />
+          </Item>
+        ))}
+      </ul>
+    </div>
   );
 };
