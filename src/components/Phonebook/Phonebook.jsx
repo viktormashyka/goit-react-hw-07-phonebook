@@ -1,12 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getContacts } from 'redux/selectors';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
-import { getError, getIsLoading, getItems } from 'redux/selectors';
+import { getError, getIsLoading, getContacts } from 'redux/selectors';
 
 import { ContactForm } from '../ContactsForm/ContactsForm';
 import { FilterBox } from '../ContactsFilter/ContactsFilter';
