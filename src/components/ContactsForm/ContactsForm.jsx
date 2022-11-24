@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 import { Button } from './ContactsForm.styled';
@@ -25,6 +26,10 @@ export const ContactForm = () => {
     dispatch(addContact({ name, number }));
     form.reset();
   };
+
+  // useEffect(() => {
+  //   dispatch(addContact());
+  // }, [dispatch]);
 
   return (
     <form onSubmit={handleSubmit}>

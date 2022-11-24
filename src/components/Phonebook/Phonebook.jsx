@@ -28,7 +28,7 @@ export const Phonebook = () => {
       <h1>Phonebook</h1>
       <ContactForm />
       {isLoading && !error && <b>Request in progress...</b>}
-      {error && <p>{error}</p>}
+      {/* {error && <p>{error}</p>} */}
       {/* <p>{contacts.length > 0 && JSON.stringify(contacts, null, 2)}</p> */}
       {contacts.length > 0 && !isLoading && (
         <div>

@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import { deleteContact } from 'redux/operations';
 
 export const ContactItem = ({ contact }) => {
@@ -6,12 +7,17 @@ export const ContactItem = ({ contact }) => {
 
   const handleDelete = () => dispatch(deleteContact(contact.id));
 
+  // useEffect(() => {
+  //   dispatch(deleteContact());
+  // }, [dispatch]);
+
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <span>
         {contact.name}: {contact.number}
       </span>
-      <button type="submit" onClick={handleDelete}>
+      {/* <img src={contact.avatar} /> */}
+      <button type="button" onClick={handleDelete}>
         Delete
       </button>
     </div>
